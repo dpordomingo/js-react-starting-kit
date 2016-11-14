@@ -1,0 +1,20 @@
+{{ partial "head.html" . }}
+<body>
+    {{ partial "header.html" . }}
+    
+    <div>
+        <span id="hello"></span>
+        <span id="world"></span>
+    </div>
+
+    <ul>
+        <li><a href="/categories">categories</a></li>
+        <li><a href="/json">JSONs</a></li>
+        {{ range $k, $page := .Site.Taxonomies.classes.static.Pages }}
+            <li><a href="{{ $page.RelPermalink}}">{{ $page.LinkTitle }}</a></li>
+        {{ end }}
+    </ul> 
+
+  {{ partial "footer.html" . }}
+</body>
+</html>

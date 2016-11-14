@@ -1,0 +1,28 @@
+{{ partial "head.html" . }}
+<body>
+    {{ partial "header.html" . }}
+
+    <img src="{{ .Params.image }}" style="max-width:200px;" />
+    <hr />
+    <h1>{{ .Title }}</h1>
+    {{ .Params.author }} - <time datetime="{{ .Date.Format "02 January 2006" }}">{{ .Date.Format "02 January 2006" }}</time><hr />
+    {{ .Params.description }}
+    <br /><br />
+    {{.Content}}
+
+    {{ $siteCategories := .Site.Taxonomies.categories }}
+    {{ $pageCategories := .Params.categories }}
+    <ul>{{ range $k, $categoryName := $pageCategories }}
+        <li>{{ $categoryName }}
+            <ul>{{ $category := index $siteCategories $categoryName }}
+                {{ range $k, $page := $category.Pages }}
+                    <li><a href="{{ $page.RelPermalink}}">{{ $page.LinkTitle }}</a></li>
+                {{ end }}
+            </ul>
+        </li>
+        {{ end }}
+    </ul> 
+
+  {{ partial "footer.html" . }}
+</body>
+</html>

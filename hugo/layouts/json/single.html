@@ -1,0 +1,10 @@
+{{ $pages := index .Site.Taxonomies.categories .Title }}
+{
+  "Status": 200,
+  "Body": [{{ range sort $pages.Pages }}
+    {
+      "title": '{{ .LinkTitle }}',
+      "link": '{{ .Permalink }}'
+    },{{ end }}
+  ]
+}

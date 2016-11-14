@@ -1,0 +1,15 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{{ with .Title }}{{.}} on {{ end }}{{ .Site.Title }}</title>
+    <link>{{ .Permalink }}</link>{{ if not .Date.IsZero }}
+    <lastBuildDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</lastBuildDate>{{ end }}
+    <atom:link href="{{.URL}}" rel="self" type="application/rss+xml" />
+    
+    {{ range .Data.Pages }}
+    <item>
+      <title>{{ .Title }}</title>
+      <link>{{ .Permalink }}</link>
+    </item>
+    {{ end }}
+  </channel>
+</rss>

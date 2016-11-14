@@ -1,0 +1,51 @@
+baseurl: "/"
+title: "Hugo React strting page"
+
+Languages:
+  es: {lang: es}
+  en: {lang: en}
+languageCode: en
+DefaultContentLanguage: en
+DefaultContentLanguageInSubdir: false
+
+contentdir:   "hugo/content"
+dataDir:      "hugo/data"
+layoutdir:    "hugo/layouts"
+themesdir:    "hugo/themes"
+archetypedir: "hugo/archetype"
+destination:  "public"
+publishdir:   "public"
+staticdir:    "static"
+theme:        ""
+
+metaDataFormat: "yaml"
+uglyURLs: false
+paginate: 10
+paginatePath: "page"
+
+googleAnalytics: ""
+
+disableRSS: false
+disableSitemap: false
+enableRobotsTXT: false
+enableEmoji: true
+
+watch: true
+log: false
+verbose: false
+verboseLog: false
+cleanDestinationDir: true
+
+taxonomies:
+  category: "categories"
+  class: "classes"
+
+params:
+  author: David Pordomingo
+  description: "This is my first Hugo React page"
+  copyright: Apache License v2 - Copyright (c) 2016 David Pordomingo de la Fuente
+  location: ""
+  social:
+    twitter: "twitter"
+    github: "github"
+    linkedin: "linkedin"

@@ -1,0 +1,13 @@
+{{ partial "head.html" . }}
+<body>
+    {{ partial "header.html" . }}
+
+        {{ range where .Data.Pages "Section" "==" "json" }}
+        <li>
+          <span><a href="{{ .Permalink }}">{{ .Title }}</a> <time class="pull-right post-list">{{ .Date.Format "Mon, Jan 2, 2006" }}</time></span>
+        </li>
+        {{ end }}
+
+  {{ partial "footer.html" . }}
+</body>
+</html>
