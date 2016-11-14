@@ -1,7 +1,7 @@
 {
   "name": "js-react-starting-kit",
   "version": "1.0.0",
-  "description": "Starting a project with React/Flux Webpack Babel",
+  "description": "Starting a project with React/Flux Webpack Babel and SASS",
   "main": "./src/js/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

@@ -1,11 +1,12 @@
 # js-react-starting-kit
-Starting a project with Hugo, React, Redux, Webpack and Babel
+Starting a project with Hugo, React, Redux, Webpack, Babel and SASS
 
 - [Hugo](https://gohugo.io/overview/introduction) is a Go general-purpose website framework that works as a static site generator.
 - [React](https://facebook.github.io/react) is a JavaScript library providing a view for data rendered as HTML.
 - [Redux](http://redux.js.org) Redux is a predictable state container for JavaScript apps.
 - [Webpack](https://webpack.github.io) is a JavaScript module bundler that generates static assets representing your module dependencies.
 - [Babel](https://babeljs.io) Babel is a Javascript ECMAScript 6 to ECMAScript 5 compiler.
+- [SASS](http://sass-lang.com/) is a scripting language that is interpreted into CSS
 
 Is a crazy idea to join Hugo and Webpack?
 Lets see..
