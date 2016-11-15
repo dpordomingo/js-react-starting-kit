@@ -24,8 +24,7 @@ npm install
 Build it:
 ===
 ```
-hugo --config=config/hugo.config.yaml
-webpack --config=config/webpack.config.js
+npm run build
 ```
 
 Development server:
@@ -36,19 +35,19 @@ At this point, things are different if you are focused in Hugo, or in Webpack:
 
 Accessing the site through hugo:
 ---
-If you are visiting the site from `hugo server`, and generating the bundles with `webpack-dev-server`, there will be no bundles available to hugo.
-The way to view updated bundles through hugo server is using `webpack -w` instead the development server; this way, the bundles will be available for hugo.
+Using `hugo server`, there will be live reload when hugo files changes;<br />
+You should build the bundles using `webpack -w` (because using `webpack-dev-server` bundles are served from memory)
 ```
-hugo server --config=config/hugo.config.yaml --destination=public --port=8181
-webpack --config=config/webpack.config.js --progress --colors -d -w --port=8080
+npm run hugo-server
+npm run webpack-watcher
 ```
 visit: [http://localhost:8181]()
 
 Accessing the site through webpack:
 ---
-If you are visiting the site from `webpack-dev-server`, you will see the bundles updates due to webpack watcher
+using `webpack-dev-server` there will be live reload when webpack bundles changes;
 ```
-hugo server --config=config/hugo.config.yaml --destination=public --port=8181
-webpack-dev-server --config=config/webpack.config.js --progress --colors -d -w --port=8080
+npm run hugo-server
+npm run webpack-server
 ```
-visit: [http://localhost:8080]()
+visit: [http://localhost:8282]() or [http://localhost:8282/webpack-dev-server/]()

@@ -4,6 +4,10 @@
   "description": "Starting a project with React/Flux Webpack Babel and SASS",
   "main": "./src/js/main.js",
   "scripts": {
+    "build": "hugo server --config=config/hugo.config.yaml; webpack --config=config/webpack.config.js",
+    "hugo-server": "hugo server --config=config/hugo.config.yaml --destination=public --port=8181",
+    "webpack-server": "webpack-dev-server --config=config/webpack.config.js --port=8282 --watch --debug --verbose --progress --colors",
+    "webpack-watcher": "webpack --config=config/webpack.config.js --watch --debug --verbose --progress --colors",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
