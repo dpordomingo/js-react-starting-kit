@@ -14,7 +14,8 @@
     "React",
     "Flux",
     "Webpack",
-    "Babel"
+    "Babel",
+    "SASS"
   ],
   "author": "David Pordomingo",
   "license": "Apache-2.0",
@@ -23,19 +24,26 @@
   },
   "homepage": "https://github.com/dpordomingo/js-react-starting-kit#readme",
   "dependencies": {
-    "react": "^15.3",
-    "react-dom": "^15"
+    "immutable": "^3.8.1",
+    "redux": "^3.6.0",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "react-redux": "^4.4.6",
+    "whatwg-fetch": "^2.0.0",
+    "es6-promise": "^4.0.5"
   },
   "devDependencies": {
+    "imports-loader": "^0.6.5",
+    "exports-loader": "^0.6.3",
+    "webpack": "^1.13",
     "babel-core": "^6.18",
     "babel-loader": "^6.2",
     "babel-preset-es2015": "^6.18",
     "babel-preset-react": "^6.16",
-    "node-sass": "^3.12",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "style-loader": "^0.13.1",
     "css-loader": "^0.25.0",
     "sass-loader": "^4.0.2",
-    "style-loader": "^0.13.1",
-    "extract-text-webpack-plugin": "^1.0.1",
-    "webpack": "^1.13"
+    "node-sass": "^3.12"
   }
 }
